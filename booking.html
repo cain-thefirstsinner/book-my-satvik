@@ -72,14 +72,6 @@
         <button onclick="confirmBooking()">Confirm Booking</button>
     </div>
     
-    <div class="container">
-        <h2>Customer Reviews</h2>
-        <label for="review">Write your review:</label>
-        <textarea id="review" placeholder="Share your experience..." rows="4" cols="50"></textarea>
-        <br>
-        <button onclick="submitReview()">Submit Review</button>
-    </div>
-    
     <script>
         function confirmBooking() {
             let name = document.getElementById('customer-name').value;
@@ -93,15 +85,7 @@
             }
             
             alert('Booking confirmed for ' + name + ' at ' + venue + ' at ' + time + '\nAccount Details: ' + accountDetails);
-        }
-        
-        function submitReview() {
-            let review = document.getElementById('review').value;
-            if (!review) {
-                alert('Please write a review before submitting.');
-                return;
-            }
-            alert('Thank you for your feedback!');
+            window.location.href = 'feedback.html';
         }
     </script>
 </body>
